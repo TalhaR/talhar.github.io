@@ -1,3 +1,7 @@
 body {
     background-color: darkslategray;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+    font-size: 72px
 }
