@@ -8,7 +8,7 @@ body {
     font-size: 3em;
 }
 
-#Navigation-Menu {
+#navigation-menu {
     font-size: 110%;
     list-style-type: none;
     margin: 0;
@@ -16,6 +16,10 @@ body {
     overflow: hidden;
     background-color: rgb(71, 63, 63);
 }
+
+/* #projects {
+    text-align: center;
+} */
 
 li a {
     float: right;
