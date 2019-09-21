@@ -1,20 +1,25 @@
 body {
     background-color: rgb(229, 205, 182);
-    font-size: 100%;
+    font-size: 110%;
     font-family: 'Courier New', Courier, monospace;
+    word-spacing: .5px;
 }
 
 #main-header{
     font-size: 3em;
 }
 
-#navigation-menu {
-    font-size: 110%;
+.navigation-menu {
+    font-size: 125%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: rgb(71, 63, 63);
+}
+
+h2 {
+    font-size: 200%;
 }
 
 /* #projects {
