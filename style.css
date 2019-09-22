@@ -31,11 +31,14 @@ h3 {
     height: auto;
 }
 
-@media only screen and (min-width: 1010px) {
+@media only screen and (min-width: 1300px) {
     /* For computers only */
     [id="projects"]{
         display: grid;
-        grid-template-columns: 26% 29%;
+        grid-template-columns: 20% 20%;
+    }
+    [id="calc"]{
+        text-align: center;
     }
 }
 
