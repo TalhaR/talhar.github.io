@@ -1,6 +1,6 @@
 body {
     background-color: rgb(229, 205, 182);
-    font-size: 110%;
+    font-size: 120%;
     font-family: 'Courier New', Courier, monospace;
     word-spacing: .5px;
 }
@@ -12,8 +12,8 @@ body {
 .navigation-menu {
     font-size: 125%;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow: hidden;
     background-color: rgb(71, 63, 63);
 }
@@ -22,9 +22,18 @@ h2 {
     font-size: 200%;
 }
 
-/* #projects {
-    text-align: center;
-} */
+h3 {
+    font-size: 150%
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 23% 29%;
+}
+
+#calc-text {
+    padding-left: 20px;
+}
 
 li a {
     float: right;
