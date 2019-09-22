@@ -26,13 +26,18 @@ h3 {
     font-size: 150%
 }
 
+#calc {
+    max-width: 100%;
+    height: auto;
+}
+
 #projects {
     display: grid;
     grid-template-columns: 23% 29%;
 }
 
 #calc-text {
-    padding-left: 20px;
+    padding-left: 10%;
 }
 
 li a {
