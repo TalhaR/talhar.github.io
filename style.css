@@ -27,17 +27,16 @@ h3 {
 }
 
 #calc {
+    max-width: 100%;
     height: auto;
 }
 
-#projects {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 23% 29%;
-}
-
-#calc-text {
-    padding-left: 10%;
+@media only screen and (min-width: 1010px) {
+    /* For computers only */
+    [id="projects"]{
+        display: grid;
+        grid-template-columns: 26% 29%;
+    }
 }
 
 li a {
