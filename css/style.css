@@ -1,7 +1,7 @@
 body {
     background-color: rgb(42, 50, 55);
     font-size: 110%;
-    font-weight: 600;
+    font-weight: 570;
     font-family: 'Courier New', Courier, monospace;
     color: whitesmoke;
 }
@@ -9,8 +9,6 @@ body {
 /* Header */
 header {
     display: block;
-    font-size: 125%;
-    list-style-type: none;
     background-color: rgb(38, 40, 44);
 }
 
@@ -83,17 +81,4 @@ aside {
     
     margin: auto;
     height: 700px;
-    
 }
-
-/* li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    text-decoration: none;
-} 
-
- li a:hover {
-    background-color: rgb(32, 31, 36)
-} */
