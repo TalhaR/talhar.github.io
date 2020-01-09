@@ -24,7 +24,7 @@ header h1 {
 .container {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 20px;
     min-height: 750px;
 }
 
@@ -32,6 +32,7 @@ header h1 {
 
 section {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     flex: 1;
     height: 750px;
@@ -43,12 +44,13 @@ section {
     flex: 1;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 figure {
     /* background-color: red; */
     display: flex;
-    flex: 1;
+    flex: 3;
     justify-content: center;
     align-items: center;
 }
@@ -60,7 +62,6 @@ aside {
 }
 
 .console {
-    /* margin: 15px; */
     background-color: rgb(32, 32, 32);
     height: 10px;
     border-radius: 5px;
@@ -68,17 +69,14 @@ aside {
 }
 
 .innerconsole {
-    /* margin: 15px; */
     background-color: rgb(85, 92, 97);
-    height: 700px;
+    min-height: 500px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: 25px;
+    padding-top: 25px;
+    padding-left: 25px;
 }
 
 .consoletext {
     /* background-color: blue; */
-    
-    margin: auto;
-    height: 700px;
 }
