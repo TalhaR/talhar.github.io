@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="styles/reset.css" type="text/css">
+        <!-- Website CSS -->
+        <link rel="stylesheet" href="styles/style.css" type="text/css">
+        
         <title> Talha Rahman</title>
         <meta charset="UTF-8">
         <meta name="author" content="Talha Rahman">
@@ -11,16 +15,67 @@
     </head>
     
     <body>
-        <div>
-            <ul class="navigation-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#home">Home</a></li>
+        <header>
+            <ul>
+                <h1>Talha Rahman</h1>
+                
+                
             </ul>
+        </header>
+        
+        <div class="container">
+            <section>
+                <div class="intro">
+                    <p> 
+                        Hey! I'm Talha.
+                        I am an aspring Software Engineer
+                    </p>
+                </div>
+                
+                <figure>
+                    <img src="img/expert.jpg" alt="Me">
+                </figure>
+            </section>
+            
+            <aside>
+                <div class="console">
+                    <div class="innerconsole">
+                        <div class="consoletext">
+                            <p>String getLocation() { </p>
+                            <p>&nbsp;&nbsp; return "New York, NY";</p>
+                            <p>}</p><br>
+                            <p>String getCollege() { </p>
+                            <p>&nbsp;&nbsp; return "Hunter College";</p>
+                            <p>}</p><br>
+                            <p>String getMajor() { </p>
+                            <p>&nbsp;&nbsp; return "Computer Science";</p>
+                            <p>}</p><br>
+                            <p>Date getExpectedGraduation() { </p>
+                            <p>&nbsp;&nbsp; return new Date(2021, June);</p>
+                            <p>}</p><br>
+                            <p>String[] getProgrammingLanguages() { </p>
+                            <p>&nbsp;&nbsp; return {"C++", "Java", "HTML", "CSS", "Javascript"};</p>
+                            <p>}</p><br>
+                            <p>String[] getInterests() { </p>
+                            <p>&nbsp;&nbsp; return {"Guitar", "Skateboarding", 
+                                "PC Building", 
+                                "Long walks on the beach"};
+                            </p>
+                            <p>}</p><br>
+                            <p>String[] getEmail() { </p>
+                            <p>&nbsp;&nbsp; return talha.rahman87@myhunter.cuny.edu </p>
+                            <p>}</p><br>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </aside>
         </div>
+        
 
-        <h1 id="main-header"> About Me </h1>
+        <!-- <h1 id="main-header"> About Me </h1>
 
         <h2> Backstory </h2>
         <p> I was born at a very young age. </p>
@@ -36,23 +91,6 @@
             <p> I'm also in the middle of making this website a bit better. </p>
         </div>
         <br>
-        
-        <h2> Projects </h2>
-        <h3> Calculator</h3>
-        <div id="projects">
-            <div id="calc">
-                <img src="img/calc.png" alt="My Calculator in Action" title="My Calculator in Action">
-            </div>
-            <div id="calc-text">
-                <p>I wrote this calculator application in Java. The GUI was made with JavaFX. 
-                    I made this because everything I did for my class was command line-based.
-                    It wasn't very interesting to just read text. So, I decided to learn on my own
-                    how to make a GUI. This won't be replacing the windows calculator anytime soon, 
-                    but we're getting there.</p>
-            </div>
-            
-            <br>
-        </div>
 
         <div id="hobbies">
             <h2> Hobbies & Interests </h2>
@@ -63,6 +101,6 @@
                 <li> Seizing the means of production </li>
                 <li> Long walks on the beach </li>
             </ul>
-        </div>
+        </div> -->
     </body>
 </html>
