@@ -12,6 +12,7 @@ theme = responsiveFontSizes(theme);
 const useStyles = makeStyles((theme) => ({
     headerContainer: {
         position: 'relative',
+        marginBottom: '5%',
     },
     headerText: {
         position: 'absolute',
@@ -33,7 +34,7 @@ export default function Header() {
     const classes = useStyles();
 
     return (
-        <React.Fragment>
+        <header>
             <Grid container className={classes.headerContainer}>
                 <Grid item xs={12}>
                     <img className={classes.headerImage} src={stars} alt="stars" />
@@ -42,10 +43,9 @@ export default function Header() {
                             今日は
                         </Typography>
                     </ThemeProvider>
-
                 </Grid>
             </Grid>
-        </React.Fragment>
+        </header>
     )
 }
 
