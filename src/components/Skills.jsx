@@ -1,77 +1,50 @@
-import Typography from '@material-ui/core/Typography'
+import { Button, Paper, ButtonGroup, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import ButtonGroup from '@material-ui/core/ButtonGroup';
-import Button from '@material-ui/core/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-import Paper  from '@material-ui/core/Paper';
+import { faCuttlefish, faPython, faSwift, faJava, faJs } from "@fortawesome/free-brands-svg-icons";
+import SkillCard from './SkillCard'
 
 const useStyles = makeStyles((theme) => ({
+    section: {
+        backgroundColor: '#0a254a',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '500px'
+    },
     skillsContainer: {
         textAlign: 'center',
-        marginBottom: '5%',
-        backgroundColor: '#0B46A7',
-        height: '500px',
+        height: '400px',
+        justifyContent: 'space-around',
     },
-    aboutText: {
-        [theme.breakpoints.up('sm')]: {
-            margin: '1% 25%',
-        },
-    }
+    languageSkills: {
+        justifyContent: 'space-evenly',
+    },
+    
 }));
 
 export default function Skills() {
     const classes = useStyles();
 
     return (
-        <Grid container className={classes.skillsContainer} spacing={2}>
-            <Grid item xs={12}>
-                <Typography variant="h2">
-                    Skills
-                </Typography>
-            </Grid>
-            <Grid item xs={12}>
-                <ButtonGroup>
-                    <Button color="inherit">Skills</Button>
-                    <Button color="inherit">Tools</Button>
-                </ButtonGroup>
-            </Grid>
-            <Grid item xs={2}>
-                <Paper> 
-                    <FontAwesomeIcon icon={faCoffee}/><br/>
-                    Test 
-                </Paper>
-            </Grid>
-            <Grid item xs={2}>
-                <Paper> 
-                    <FontAwesomeIcon icon={faCoffee}/><br/>
-                    Test 
-                </Paper>
-            </Grid>
-            <Grid item xs={2}>
-                <Paper> 
-                    <FontAwesomeIcon icon={faCoffee}/><br/>
-                    Test 
-                </Paper>
-            </Grid>
-            <Grid item xs={2}>
-                <Paper> 
-                    <FontAwesomeIcon icon={faCoffee}/><br/>
-                    Test 
-                </Paper>
-            </Grid>
-            <Grid item xs={2}>
-                <Paper> 
-                    <FontAwesomeIcon icon={faCoffee}/><br/>
-                    Test 
-                </Paper>
-            </Grid>
-            <Grid item xs={2}>
-                <Paper> 
-                    <FontAwesomeIcon icon={faCoffee}/><br/>
-                    Test 
-                </Paper>
+        <Grid container item xs={12} className={classes.section}>
+            <Grid item xs={12} md={9} lg={6} container  direction="column" className={classes.skillsContainer}>
+                <Grid item >
+                    <Typography variant="h2">
+                        Skills
+                    </Typography>
+                </Grid>
+                <Grid item >
+                    <ButtonGroup>
+                        <Button color="inherit">Languages</Button>
+                        <Button color="inherit">Tools</Button>
+                    </ButtonGroup>
+                </Grid>
+                <Grid container item className={classes.languageSkills}>
+                    <SkillCard icon={faCuttlefish} name="C++" />
+                    <SkillCard icon={faJava} name="Java" />
+                    <SkillCard icon={faPython} name="Python" />
+                    <SkillCard icon={faSwift} name="Swift" />
+                    <SkillCard icon={faJs} name="Javascript" />
+                </Grid>
             </Grid>
         </Grid>
     )

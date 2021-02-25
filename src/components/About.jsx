@@ -1,6 +1,5 @@
-import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
+import { Grid, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     aboutContainer: {
@@ -9,8 +8,11 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: '10%',
     },
     aboutText: {
+        justifyContent: 'center',
+        textAlign: 'center',
+        width: '50%',
         [theme.breakpoints.up('sm')]: {
-            margin: '1% 25%',
+            margin: '1% 0%',
         },
     }
 }));
@@ -20,19 +22,18 @@ export default function About() {
 
     return (
         <Grid container className={classes.aboutContainer}>
-            <Grid item>
+            <Grid item style={{textAlign: '-webkit-center'}}>
                 <Typography variant="h1">
                     Talha Rahman
-            </Typography>
+                </Typography>
                 <br />
                 <Typography variant="h2">
                     <small> Student Software Developer </small>
                 </Typography>
                 <br />
                 <Typography variant="body1" className={classes.aboutText}>
-                    I am a senior computer science major at Hunter College. I try my best to write code that runs without complier errors. You can check more about me or some of the projects I am working on below.
-            </Typography>
-
+                    I am a senior computer science major at Hunter College. I try my best to write code that runs without complier errors. Check more about me and some projects I am working on below.
+                </Typography>
             </Grid>
         </Grid>
     )

@@ -1,9 +1,11 @@
-import Grid from '@material-ui/core/Grid';
 import './App.css';
+import React from 'react';
 import Header from './components/Header';
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Skills from './components/Skills'
+import { Grid } from '@material-ui/core';
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Skills/>
 
       </Grid>
+
       
     </div>
   );
