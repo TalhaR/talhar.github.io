@@ -1,10 +1,7 @@
 import React from 'react'
 import stars from '../img/stars.jpg'
-import { makeStyles, createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
-
-let theme = createMuiTheme();
-theme = responsiveFontSizes(theme);
 
 const useStyles = makeStyles((theme) => ({
     headerContainer: {
@@ -13,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
     },
     headerText: {
         position: 'absolute',
-        color: 'white',
         width: '100%',
         textAlign: 'center',
         top: '25%',
@@ -34,11 +30,9 @@ export default function Header() {
         <Grid container className={classes.headerContainer}>
             <Grid item xs={12}>
                 <img className={classes.headerImage} src={stars} alt="stars" />
-                <ThemeProvider theme={theme}>
-                    <Typography variant="h2" className={classes.headerText}>
-                        今日は
-                    </Typography>
-                </ThemeProvider>
+                <Typography variant="h2" className={classes.headerText}>
+                    今日は
+                </Typography>
             </Grid>
         </Grid>
     )

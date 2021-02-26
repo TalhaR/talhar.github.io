@@ -58,7 +58,7 @@ export default function Navbar() {
 
     return (
         <nav className={classes.root}>
-            <AppBar position="static">
+            <AppBar position="static" color="secondary">
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
                         Talha
