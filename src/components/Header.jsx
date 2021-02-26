@@ -6,7 +6,6 @@ import { Grid, Typography } from '@material-ui/core'
 const useStyles = makeStyles((theme) => ({
     headerContainer: {
         position: 'relative',
-        marginBottom: '5%',
     },
     headerText: {
         position: 'absolute',

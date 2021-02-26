@@ -1,50 +1,70 @@
-import { Button, ButtonGroup, Grid, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles'
-import { faCuttlefish, faPython, faSwift, faJava, faJs } from "@fortawesome/free-brands-svg-icons";
-import SkillCard from './SkillCard'
+import { useState } from "react";
+import { Button, ButtonGroup, Grid, Typography } from "@material-ui/core";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
+import SkillCard from "./SkillCard";
+import { languages, tools } from "./constants";
 
 const useStyles = makeStyles((theme) => ({
     section: {
         backgroundColor: theme.palette.secondary.main,
-        justifyContent: 'center',
-        alignItems: 'center',
-        // color: '#e5e0d8',
+        justifyContent: "center",
+        alignItems: "center",
     },
     skillsContainer: {
-        textAlign: 'center',
-        height: '400px',
-        alignContent: 'space-evenly',
+        textAlign: "center",
+        height: "375px",
+        alignContent: "space-evenly",
+        [theme.breakpoints.up('sm')]: {
+            height: "400px",
+        },
     },
-    languageSkills: {
-        justifyContent: 'space-evenly',
+    displaySkills: {
+        justifyContent: "space-evenly",
     },
 }));
 
+const ColorButton = withStyles((theme) => ({
+    root: {
+        color: theme.palette.getContrastText('#1f2020'),
+        backgroundColor: '#1f2020',
+        "&:hover": {
+            backgroundColor: '#1f2121',
+        },
+    },
+}))(Button);
+
 export default function Skills() {
     const classes = useStyles();
+    const [showLanguages, setShowLanguages] = useState(true);
+
+    const getIconsList = (listObj) => {
+        return <SkillCard {...listObj} />;
+    };
+
+    const displayList = (list) => {
+        return list.map((listObj) => getIconsList(listObj));
+    };
 
     return (
-        <Grid item xs={12} className={classes.section}>
+        <Grid item xs={12} className={classes.section} id="skills">
             <Grid container className={classes.skillsContainer}>
                 <Grid item xs={12}>
-                    <Typography variant="h2">
-                        Skills
-                    </Typography>
+                    <Typography variant="h2">Skills</Typography>
                 </Grid>
                 <Grid item xs={12}>
                     <ButtonGroup>
-                        <Button color="inherit">Languages</Button>
-                        <Button color="inherit">Tools</Button>
+                        <ColorButton onClick={() => setShowLanguages(true)}>
+                            Languages
+                        </ColorButton>
+                        <ColorButton onClick={() => setShowLanguages(false)}>
+                            Tools
+                        </ColorButton>
                     </ButtonGroup>
                 </Grid>
-                <Grid container item xs={12} className={classes.languageSkills}>
-                    <SkillCard icon={faCuttlefish} name="C++" />
-                    <SkillCard icon={faJava} name="Java" />
-                    <SkillCard icon={faPython} name="Python" />
-                    <SkillCard icon={faSwift} name="Swift" />
-                    <SkillCard icon={faJs} name="Javascript" />
+                <Grid container item xs={12} className={classes.displaySkills}>
+                    { displayList( showLanguages ? languages : tools) }
                 </Grid>
             </Grid>
         </Grid>
-    )
+    );
 }

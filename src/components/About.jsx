@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
     aboutContainer: {
         textAlign: 'center',
         justifyContent: 'center',
-        marginBottom: '10%',
+        margin: '7.5% 0%',
     },
     aboutText: {
         justifyContent: 'center',
