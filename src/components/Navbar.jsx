@@ -25,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
             display: 'none',
         }
     },
+    mobileMenuItem: {
+        color: 'inherit',
+        textDecoration: 'none',
+    }
 }));
 
 export default function Navbar() {
@@ -42,13 +46,17 @@ export default function Navbar() {
         <Menu anchorEl={mobileMoreAnchorEl} id={mobileMenuId} keepMounted
             anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-            open={isMobileMenuOpen} onClose={handleMobileMenuClose}
+            open={isMobileMenuOpen} onClose={handleMobileMenuClose} 
             >
             <MenuItem>
-                <p>Skills</p>
+                <a href="#skills" className={classes.mobileMenuItem} onClick={handleMobileMenuClose}>
+                    <p>Skills</p> 
+                </a>
             </MenuItem>
             <MenuItem>
-                <p>Projects</p>
+                <a href="#projects" className={classes.mobileMenuItem} onClick={handleMobileMenuClose}>
+                    <p>Projects</p>
+                </a>
             </MenuItem>
             <MenuItem>
                 <p>Contact</p>
@@ -65,8 +73,8 @@ export default function Navbar() {
                     </Typography>
 
                     <div className={classes.sectionDesktop}>
-                        <Button color="inherit">Skills</Button>
-                        <Button color="inherit">Projects</Button>
+                        <Button color="inherit" href="#skills">Skills</Button>
+                        <Button color="inherit" href="#projects">Projects</Button>
                         <Button color="inherit">Contact</Button>
                     </div>
 
