@@ -1,44 +1,43 @@
-import { Button, Paper, ButtonGroup, Grid, Typography } from '@material-ui/core';
+import { Button, ButtonGroup, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles'
 import { faCuttlefish, faPython, faSwift, faJava, faJs } from "@fortawesome/free-brands-svg-icons";
 import SkillCard from './SkillCard'
 
 const useStyles = makeStyles((theme) => ({
     section: {
-        backgroundColor: '#0a254a',
+        backgroundColor: theme.palette.secondary.main,
         justifyContent: 'center',
         alignItems: 'center',
-        height: '500px'
+        // color: '#e5e0d8',
     },
     skillsContainer: {
         textAlign: 'center',
         height: '400px',
-        justifyContent: 'space-around',
+        alignContent: 'space-evenly',
     },
     languageSkills: {
         justifyContent: 'space-evenly',
     },
-    
 }));
 
 export default function Skills() {
     const classes = useStyles();
 
     return (
-        <Grid container item xs={12} className={classes.section}>
-            <Grid item xs={12} md={9} lg={6} container  direction="column" className={classes.skillsContainer}>
-                <Grid item >
+        <Grid item xs={12} className={classes.section}>
+            <Grid container className={classes.skillsContainer}>
+                <Grid item xs={12}>
                     <Typography variant="h2">
                         Skills
                     </Typography>
                 </Grid>
-                <Grid item >
+                <Grid item xs={12}>
                     <ButtonGroup>
                         <Button color="inherit">Languages</Button>
                         <Button color="inherit">Tools</Button>
                     </ButtonGroup>
                 </Grid>
-                <Grid container item className={classes.languageSkills}>
+                <Grid container item xs={12} className={classes.languageSkills}>
                     <SkillCard icon={faCuttlefish} name="C++" />
                     <SkillCard icon={faJava} name="Java" />
                     <SkillCard icon={faPython} name="Python" />
