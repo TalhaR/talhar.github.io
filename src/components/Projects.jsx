@@ -21,7 +21,7 @@ export default function Projects() {
     const classes = useStyles();
 
     return (
-        <Grid container className={classes.projectsContainer}>
+        <Grid container className={classes.projectsContainer} id="projects">
             <Grid item>
                 <Typography variant="h2">
                     Projects
