@@ -1,5 +1,5 @@
 import { faCuttlefish, faPython, faSwift, faJava, faJs, faReact, faBootstrap, faGitAlt} from "@fortawesome/free-brands-svg-icons";
-import { faTerminal } from '@fortawesome/free-solid-svg-icons';
+import { faTerminal, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import anilist from '../img/anilist.png'
 import dwarves from '../img/dwarves.png'
 
@@ -71,4 +71,9 @@ export const tools = [
         icon: faTerminal,
         name: "Bash"
     },
+    {
+        key: 5,
+        icon: faDatabase,
+        name: "SQL"
+    }
 ]

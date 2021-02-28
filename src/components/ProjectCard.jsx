@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles'
 import { Button, Card, CardActions, CardContent, CardMedia, Chip, Grid, Typography } from '@material-ui/core'
-import anilist from '../img/anilist.png'
 
 const useStyles = makeStyles((theme) => ({
     cardContainer: {
@@ -9,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '56.25%'
     },
     featuresContainer: {
-        paddingTop: '5%',
+        paddingTop: '3%',
     },
     footer: {
         borderTop: '3px solid black',
@@ -33,7 +32,7 @@ function ProjectCard({title, img, desc, features, link}) {
                 <CardMedia className={classes.media} 
                 image={ img }/>
                 <CardContent>
-                    <Typography variant="h4" component="h2">
+                    <Typography variant="h4" component="h2" style={{paddingBottom: '2%'}}>
                         { title }
                     </Typography>
                     <Typography variant="body1" component="p">
