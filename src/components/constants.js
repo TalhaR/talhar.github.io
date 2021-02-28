@@ -1,5 +1,26 @@
 import { faCuttlefish, faPython, faSwift, faJava, faJs, faReact, faBootstrap, faGitAlt} from "@fortawesome/free-brands-svg-icons";
 import { faTerminal } from '@fortawesome/free-solid-svg-icons';
+import anilist from '../img/anilist.png'
+import dwarves from '../img/dwarves.png'
+
+export const projects = [
+    {
+        key: 1,
+        title : "Kuro",
+        img : anilist,
+        desc : "iOS App to find & keep track of Animated Media",
+        features : ["Swift"],
+        link : "Kuro"
+    },
+    {
+        key: 2,
+        title : "Dwarves AI",
+        img : dwarves,
+        desc : "Console based simulation of dwarves surviving & gathering resources",
+        features : ["C++"],
+        link : "Dwarves-AI"
+    },
+]
 
 export const languages = [
     {

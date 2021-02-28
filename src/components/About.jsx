@@ -5,7 +5,10 @@ const useStyles = makeStyles((theme) => ({
     aboutContainer: {
         textAlign: 'center',
         justifyContent: 'center',
-        margin: '7.5% 0%',
+        margin: '5% 0%',
+        [theme.breakpoints.up("xl")] : {
+            margin: '3% 0%'
+        }
     },
     aboutText: {
         justifyContent: 'center',

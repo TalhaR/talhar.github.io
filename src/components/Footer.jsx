@@ -26,12 +26,14 @@ export default function Footer() {
                 <Grid item xs={4} className={classes.icons}>
                     <IconButton
                         href="https://www.linkedin.com/in/talha-rahman"
+                        target="_blank"
                         aria-label="Linkedin"
                     >
                         <LinkedInIcon />
                     </IconButton>
                     <IconButton
                         href="https://www.github.com/talhar"
+                        target="_blank"
                         aria-label="Github"
                     >
                         <GitHubIcon />
