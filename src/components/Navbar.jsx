@@ -2,10 +2,17 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, Button, IconButton, MenuItem, Menu } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/core/styles';
+import resume from '../resources/Resume.pdf'
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+    },
+    nav: {
+        justifyContent: 'center',
+        [theme.breakpoints.up("lg")]: {
+            height: '75px',
+        }
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -61,12 +68,17 @@ export default function Navbar() {
             <MenuItem>
                 <p>Contact</p>
             </MenuItem>
+            <MenuItem>
+                <a href="https://github.com/TalhaR/TalhaR/blob/main/Resume.pdf" target="blank" className={classes.mobileMenuItem} onClick={handleMobileMenuClose}>
+                    <p>Resume</p>
+                </a>
+            </MenuItem>
         </Menu>
     );
 
     return (
         <nav className={classes.root}>
-            <AppBar position="static" color="secondary">
+            <AppBar position="static" color="secondary" className={classes.nav}>
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
                         Talha
@@ -76,6 +88,7 @@ export default function Navbar() {
                         <Button color="inherit" href="#skills">Skills</Button>
                         <Button color="inherit" href="#projects">Projects</Button>
                         <Button color="inherit">Contact</Button>
+                        <Button color="inherit" href={resume} download="Resume.pdf">Resume</Button>
                     </div>
 
                     <div className={classes.sectionMobile}>

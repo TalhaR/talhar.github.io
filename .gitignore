@@ -8,6 +8,7 @@
 # testing
 /coverage
 Test*
+/test
 
 # production
 /build
