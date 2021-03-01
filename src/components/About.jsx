@@ -24,7 +24,7 @@ export default function About() {
     const classes = useStyles();
 
     return (
-        <Grid container className={classes.aboutContainer}>
+        <Grid container className={classes.aboutContainer} component="section">
             <Grid item style={{textAlign: '-webkit-center'}}>
                 <Typography variant="h1">
                     Talha Rahman

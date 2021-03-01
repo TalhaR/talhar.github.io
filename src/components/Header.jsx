@@ -26,7 +26,7 @@ export default function Header() {
     const classes = useStyles();
 
     return (
-        <Grid container className={classes.headerContainer}>
+        <Grid container component="header" className={classes.headerContainer}>
             <Grid item xs={12}>
                 <img className={classes.headerImage} src={stars} alt="stars" />
                 <Typography variant="h2" className={classes.headerText}>

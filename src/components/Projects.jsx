@@ -30,7 +30,7 @@ export default function Projects() {
     } 
 
     return (
-        <Grid container className={classes.projectsContainer} id="projects" spacing={2}>
+        <Grid container id="projects" className={classes.projectsContainer} component="section" spacing={2}>
             <Grid item xs={12} className={classes.header}>
                 <Typography variant="h2">
                     Projects
