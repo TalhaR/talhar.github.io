@@ -71,7 +71,7 @@ const CssTextField = withStyles({
 
 export default function Contact() {
     const classes = useStyles();
-    const [SenderEmail, setSenderEmail] = useState(null);
+    const [SenderEmail, setSenderEmail] = useState('');
     const [Name, setName] = useState(null);
     const [Message, setMessage] = useState(null);
     const [ShowPopup, setShowPopup] = useState(false);
@@ -79,17 +79,18 @@ export default function Contact() {
     function handleSubmit(event) {
         event.preventDefault(); 
         window.Email.send({ 
-            SecureToken : "eec5684e-13e1-4c00-ae1b-533b7fc7b9ae".toUpperCase(),
+            SecureToken : "c4048fbb-1629-4696-acb3-f1bf32758bae",
             To: "delta.talha@gmail.com", 
-            From: "trpricetracker@gmail.com", 
+            From: "trbotemail@gmail.com", 
             Subject: "Portfolio Contact", 
-            Body: `From: ${Name}\nEmail: ${SenderEmail}\n Message: ${Message}`
-        }) 
-        .then(function (message) { 
-            setShowPopup(true);
-            let form = document.getElementById('form');
-            form.reset();
-        });
+            Body: `<html><h4>From: ${Name}</h4><p>Email: ${SenderEmail}</p><p>${Message}</p><html>`,
+        }).then(() => setShowPopup(true));
+        
+        let form = document.getElementById('form');
+        form.reset();
+        setName(null);
+        setMessage(null);
+        setSenderEmail('');
     }
 
     return (
@@ -98,7 +99,7 @@ export default function Contact() {
                 <Typography variant="h2" className={classes.header}>
                     Contact
                 </Typography>
-                <form id="form" className={classes.form} autoComplete="off" onSubmit={handleSubmit}>
+                <form id="form" method="post" className={classes.form} autoComplete="off" onSubmit={handleSubmit}>
                     <div>
                         <CssTextField required label="Name" variant="outlined" className={classes.regularInputs} onInput={(e) => setName(e.target.value)} />
                         <CssTextField label="Email" variant="outlined" className={classes.regularInputs}  onInput={(e) => setSenderEmail(e.target.value)}/>
