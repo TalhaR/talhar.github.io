@@ -46,7 +46,7 @@ export default function Skills() {
     };
 
     return (
-        <Grid item xs={12} className={classes.section} id="skills">
+        <Grid item xs={12} id="skills" className={classes.section} component="section">
             <Grid container className={classes.skillsContainer}>
                 <Grid item xs={12}>
                     <Typography variant="h2">Skills</Typography>
