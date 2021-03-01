@@ -1,6 +1,3 @@
 # Website
 
-My personal website.
-
-Currently, under development.
-
+My personal portfolio
