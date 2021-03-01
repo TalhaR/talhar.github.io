@@ -66,7 +66,9 @@ export default function Navbar() {
                 </a>
             </MenuItem>
             <MenuItem>
-                <p>Contact</p>
+                <a href="#contact" className={classes.mobileMenuItem} onClick={handleMobileMenuClose}>
+                    <p>Contact</p>
+                </a>
             </MenuItem>
             <MenuItem>
                 <a href="https://github.com/TalhaR/TalhaR/blob/main/Resume.pdf" target="blank" className={classes.mobileMenuItem} onClick={handleMobileMenuClose}>
@@ -87,7 +89,7 @@ export default function Navbar() {
                     <div className={classes.sectionDesktop}>
                         <Button color="inherit" href="#skills">Skills</Button>
                         <Button color="inherit" href="#projects">Projects</Button>
-                        <Button color="inherit">Contact</Button>
+                        <Button color="inherit" href="#contact">Contact</Button>
                         <Button color="inherit" href={resume} download="Resume.pdf">Resume</Button>
                     </div>
 

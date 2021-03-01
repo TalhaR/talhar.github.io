@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
-import { Button, Grid, TextField, Typography } from '@material-ui/core'
+import { Button, Grid, Snackbar, TextField, Typography } from '@material-ui/core'
+import { Alert } from '@material-ui/lab'
 
 const useStyles = makeStyles((theme) => ({
     contactContainer: {
         justifyContent: 'center',
-        height: '450px',
+        height: '425px',
         backgroundColor: theme.palette.secondary.main,
     },
     formContainer: {
@@ -70,16 +71,25 @@ const CssTextField = withStyles({
 
 export default function Contact() {
     const classes = useStyles();
-    const [Email, setEmail] = useState(null);
+    const [SenderEmail, setSenderEmail] = useState(null);
     const [Name, setName] = useState(null);
     const [Message, setMessage] = useState(null);
+    const [ShowPopup, setShowPopup] = useState(false);
 
     function handleSubmit(event) {
-        event.preventDefault();
-        // TODO
-        console.log(Name);
-        console.log(Email);
-        console.log(Message);
+        event.preventDefault(); 
+        window.Email.send({ 
+            SecureToken : "eec5684e-13e1-4c00-ae1b-533b7fc7b9ae".toUpperCase(),
+            To: "delta.talha@gmail.com", 
+            From: "trpricetracker@gmail.com", 
+            Subject: "Portfolio Contact", 
+            Body: `From: ${Name}\nEmail: ${SenderEmail}\n Message: ${Message}`
+        }) 
+        .then(function (message) { 
+            setShowPopup(true);
+            let form = document.getElementById('form');
+            form.reset();
+        });
     }
 
     return (
@@ -88,15 +98,20 @@ export default function Contact() {
                 <Typography variant="h2" className={classes.header}>
                     Contact
                 </Typography>
-                <form className={classes.form} autoComplete="off" onSubmit={handleSubmit}>
+                <form id="form" className={classes.form} autoComplete="off" onSubmit={handleSubmit}>
                     <div>
                         <CssTextField required label="Name" variant="outlined" className={classes.regularInputs} onInput={(e) => setName(e.target.value)} />
-                        <CssTextField label="Email" variant="outlined" className={classes.regularInputs}  onInput={(e) => setEmail(e.target.value)}/>
+                        <CssTextField label="Email" variant="outlined" className={classes.regularInputs}  onInput={(e) => setSenderEmail(e.target.value)}/>
                     </div>
                     <div>
                     <CssTextField required label="Message" multiline rows={4} variant="outlined" className={classes.message}  onInput={(e) => setMessage(e.target.value)}/>
                     </div>
                     <div style={{textAlign: 'center', width: '100%'}}>
+                        <Snackbar open={ShowPopup} autoHideDuration={3000} onClose={(e) => setShowPopup(false)}>
+                            <Alert onClose={(e) => setShowPopup(false)} severity="success">
+                                Sent!
+                            </Alert>
+                        </Snackbar>
                         <Button type="submit" size="large">
                             Submit
                         </Button>

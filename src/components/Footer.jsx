@@ -11,9 +11,6 @@ const useStyles = makeStyles((theme) => ({
     icons: {
         justifyContent: "center",
         textAlign: "center",
-        // [theme.breakpoints.up('sm')]: {
-        //     margin: '1% 0%',
-        // },
     },
 }));
 
