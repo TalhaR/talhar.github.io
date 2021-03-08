@@ -2,8 +2,18 @@ import { faCuttlefish, faPython, faSwift, faJava, faJs, faReact, faBootstrap, fa
 import { faTerminal, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import anilist from '../img/anilist.png'
 import dwarves from '../img/dwarves.png'
+import sort from '../img/sort.png'
 
 export const projects = [
+    {
+        key: 0,
+        title : "Sorting Visualizer",
+        img : sort,
+        desc : "Web App to visualize popular sorting algorithms",
+        features : ["React", "Javascript"],
+        link : "Sorting-visualizer",
+        link2 : "https://talhar.github.io/Sorting-visualizer/"
+    },
     {
         key: 1,
         title : "Kuro",

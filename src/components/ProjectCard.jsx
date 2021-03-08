@@ -8,7 +8,13 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '56.25%'
     },
     featuresContainer: {
-        paddingTop: '3%',
+        paddingTop: '1%',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        '& > *': {
+            margin: theme.spacing(1),
+        },
     },
     footer: {
         borderTop: '3px solid black',
@@ -16,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function ProjectCard({title, img, desc, features, link}) {
+function ProjectCard({title, img, desc, features, link, link2}) {
     const classes = useStyles();
 
     const getFeatures = (featuresList) => {
@@ -43,6 +49,12 @@ function ProjectCard({title, img, desc, features, link}) {
                     </div>
                 </CardContent>
                 <CardActions className={classes.footer}>
+                    { link2 &&
+                        <Button href={link2} target="_blank">
+                            Website
+                        </Button>
+                    }
+                    
                     <Button href={`https://github.com/TalhaR/${link}`} target="_blank">
                         Github
                     </Button>
