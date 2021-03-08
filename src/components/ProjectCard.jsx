@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
     footer: {
         borderTop: '3px solid black',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
     }
 }));
 

@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         textAlign: "center",
     },
+    text: {
+        textAlign: "right",
+        paddingRight: '5%',
+    }
 }));
 
 export default function Footer() {
@@ -19,7 +23,7 @@ export default function Footer() {
 
     return (
         <Grid container className={classes.footerContainer} component="footer">
-            <Grid item xs={4} className={classes.icons}>
+            <Grid item xs className={classes.icons}>
                 <IconButton
                     href="https://www.linkedin.com/in/talha-rahman"
                     target="_blank"
@@ -35,8 +39,8 @@ export default function Footer() {
                     <GitHubIcon />
                 </IconButton>
             </Grid>
-            <Grid item xs={8} style={{ textAlign: "right" }}>
-                <Typography variant="h6">{/* Talha */}</Typography>
+            <Grid item xs={6} className={classes.text}>
+                <Typography variant="subtitle1">© Talha Rahman </Typography>
             </Grid>
         </Grid>
     );
