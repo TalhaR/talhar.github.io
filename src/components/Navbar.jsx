@@ -111,6 +111,11 @@ export default function Navbar() {
         </Menu>
     );
 
+    const scrollToLocation = (location) => {
+        const element = document.getElementById(location);
+        window.scrollTo(0, element.offsetTop);
+    }
+
     return (
         <nav className={classes.root}>
             <AppBar position="static" color="secondary" className={classes.nav}>
@@ -120,13 +125,13 @@ export default function Navbar() {
                     </Typography>
 
                     <div className={classes.sectionDesktop}>
-                        <Button color="inherit" href="#skills">
+                        <Button color="inherit" onClick={() => scrollToLocation('skills')} >
                             Skills
                         </Button>
-                        <Button color="inherit" href="#projects">
+                        <Button color="inherit" onClick={() => scrollToLocation('projects')}>
                             Projects
                         </Button>
-                        <Button color="inherit" href="#contact">
+                        <Button color="inherit" onClick={() => scrollToLocation('contact')}>
                             Contact
                         </Button>
                         <Button
