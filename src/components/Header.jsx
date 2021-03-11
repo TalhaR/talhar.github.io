@@ -1,4 +1,3 @@
-import React from 'react'
 import stars from '../img/stars.jpg'
 import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography } from '@material-ui/core'
@@ -18,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
     headerImage: {
         width: '100%',
-        height: 'auto',
+        maxHeight: '900px'
     },
 }));
 
@@ -36,4 +35,3 @@ export default function Header() {
         </Grid>
     )
 }
-
