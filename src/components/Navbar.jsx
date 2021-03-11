@@ -1,13 +1,5 @@
 import React from "react";
-import {
-    AppBar,
-    Toolbar,
-    Typography,
-    Button,
-    IconButton,
-    MenuItem,
-    Menu,
-} from "@material-ui/core";
+import { AppBar, Toolbar, Typography, Button, IconButton, MenuItem, Menu } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
 import resume from "../resources/Resume.pdf";
@@ -49,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Navbar() {
     const classes = useStyles();
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
     const handleMobileMenuOpen = (event) => {
@@ -158,7 +149,7 @@ export default function Navbar() {
                     </div>
                 </Toolbar>
             </AppBar>
-            {renderMobileMenu}
+            { renderMobileMenu }
         </nav>
     );
 }
