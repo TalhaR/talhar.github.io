@@ -68,13 +68,13 @@ export const tools = [
     },
     {
         key: 2,
-        icon: faReact,
-        name: "React"
+        icon: faBootstrap,
+        name: "Bootstrap"
     },
     {
         key: 3,
-        icon: faBootstrap,
-        name: "Bootstrap"
+        icon: faReact,
+        name: "React"
     },
     {
         key: 4,

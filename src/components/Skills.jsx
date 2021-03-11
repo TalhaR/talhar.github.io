@@ -14,21 +14,24 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         height: "375px",
         alignContent: "space-evenly",
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up("sm")]: {
             height: "400px",
         },
     },
     displaySkills: {
+        "& > *": {
+            margin: theme.spacing(1),
+        },
         justifyContent: "space-evenly",
     },
 }));
 
 const ColorButton = withStyles((theme) => ({
     root: {
-        color: theme.palette.getContrastText('#1f2020'),
-        backgroundColor: '#1f2020',
+        color: theme.palette.getContrastText("#1f2020"),
+        backgroundColor: "#1f2020",
         "&:hover": {
-            backgroundColor: '#1f2121',
+            backgroundColor: "#1f2121",
         },
     },
 }))(Button);
@@ -57,12 +60,12 @@ export default function Skills() {
                             Languages
                         </ColorButton>
                         <ColorButton onClick={() => setShowLanguages(false)}>
-                            Tools
+                            Technology
                         </ColorButton>
                     </ButtonGroup>
                 </Grid>
                 <Grid container item xs={12} className={classes.displaySkills}>
-                    { displayList( showLanguages ? languages : tools) }
+                    { displayList(showLanguages ? languages : tools) }
                 </Grid>
             </Grid>
         </Grid>
