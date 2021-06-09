@@ -1,34 +1,44 @@
-import { faCuttlefish, faPython, faSwift, faJava, faJs, faReact, faBootstrap, faGitAlt} from "@fortawesome/free-brands-svg-icons";
+import { faCuttlefish, faPython, faSwift, faJava, faJs, faReact, faNodeJs, faGitAlt} from "@fortawesome/free-brands-svg-icons";
 import { faTerminal, faDatabase } from '@fortawesome/free-solid-svg-icons';
 import anilist from '../img/anilist.png'
 import dwarves from '../img/dwarves.png'
 import sort from '../img/sort.png'
+import poliatlas from '../img/poliatlas.png'
 
 export const projects = [
     {
         key: 0,
+        title : "Political Atlas",
+        img : poliatlas,
+        desc : "Web App to visualize emotions in Political speeches",
+        features : ["React", "Javascript", "Python", "SQL"],
+        link : "https://github.com/kkhan01/political-atlas",
+        link2 : "https://kkhan01.github.io/political-atlas/"
+    },
+    {
+        key: 1,
         title : "Sorting Visualizer",
         img : sort,
         desc : "Web App to visualize popular sorting algorithms",
         features : ["React", "Javascript"],
-        link : "Sorting-visualizer",
+        link : "https://github.com/TalhaR/Sorting-visualizer",
         link2 : "https://talhar.github.io/Sorting-visualizer/"
     },
     {
-        key: 1,
+        key: 2,
         title : "Kuro",
         img : anilist,
-        desc : "iOS App to find & keep track of Animated Media",
+        desc : "iOS App to find & keep track of Japanese Animated Media",
         features : ["Swift"],
-        link : "Kuro"
+        link : "https://github.com/TalhaR/Kuro"
     },
     {
-        key: 2,
+        key: 3,
         title : "Dwarves AI",
         img : dwarves,
         desc : "Console based simulation of dwarves surviving & gathering resources",
         features : ["C++"],
-        link : "Dwarves-AI"
+        link : "https://github.com/TalhaR/Dwarves-AI"
     },
 ]
 
@@ -44,6 +54,11 @@ export const languages = [
         name: "Java"
     },
     {
+        key: 5,
+        icon: faJs,
+        name: "Javascript"
+    },
+    {
         key: 3,
         icon: faPython,
         name: "Python"
@@ -52,11 +67,6 @@ export const languages = [
         key: 4,
         icon: faSwift,
         name: "Swift"
-    },
-    {
-        key: 5,
-        icon: faJs,
-        name: "Javascript"
     },
 ]
 
@@ -68,8 +78,8 @@ export const tools = [
     },
     {
         key: 2,
-        icon: faBootstrap,
-        name: "Bootstrap"
+        icon: faNodeJs,
+        name: "Node"
     },
     {
         key: 3,
