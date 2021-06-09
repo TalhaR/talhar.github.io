@@ -34,12 +34,12 @@ export default function About() {
             </Grid>
             <Grid item xs={12}>
                 <Typography variant="h2">
-                    <small> Student Software Developer </small>
+                    <small> Software Developer </small>
                 </Typography>
             </Grid>
             <Grid item xs={12} sm={8} md={6} lg={4} className={classes.aboutText}>
                 <Typography variant="body1">
-                    I am a senior computer science major at Hunter College. I
+                    I am a recent Computer Science grad from Hunter College. I
                     try my best to write code that runs without complier errors.
                     Check more about me and some projects I am working on below.
                 </Typography>
