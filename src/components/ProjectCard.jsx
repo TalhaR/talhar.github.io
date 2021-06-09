@@ -73,7 +73,7 @@ function ProjectCard({ title, img, desc, features, link, link2 }) {
                     )}
 
                     <Button
-                        href={`https://github.com/TalhaR/${link}`}
+                        href={link}
                         target="_blank"
                     >
                         Github
