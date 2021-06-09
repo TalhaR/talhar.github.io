@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f6f5b2e.chunk.css",
-    "main.js": "/static/js/main.7737320c.chunk.js",
-    "main.js.map": "/static/js/main.7737320c.chunk.js.map",
+    "main.css": "/static/css/main.7eb0dba0.chunk.css",
+    "main.js": "/static/js/main.81f40dd0.chunk.js",
+    "main.js.map": "/static/js/main.81f40dd0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.99041298.js",
     "runtime-main.js.map": "/static/js/runtime-main.99041298.js.map",
-    "static/js/2.90676dbb.chunk.js": "/static/js/2.90676dbb.chunk.js",
-    "static/js/2.90676dbb.chunk.js.map": "/static/js/2.90676dbb.chunk.js.map",
+    "static/js/2.b26984e9.chunk.js": "/static/js/2.b26984e9.chunk.js",
+    "static/js/2.b26984e9.chunk.js.map": "/static/js/2.b26984e9.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.5f6f5b2e.chunk.css.map": "/static/css/main.5f6f5b2e.chunk.css.map",
-    "static/js/2.90676dbb.chunk.js.LICENSE.txt": "/static/js/2.90676dbb.chunk.js.LICENSE.txt",
-    "static/media/Resume.ca199d63.pdf": "/static/media/Resume.ca199d63.pdf",
+    "static/css/main.7eb0dba0.chunk.css.map": "/static/css/main.7eb0dba0.chunk.css.map",
+    "static/js/2.b26984e9.chunk.js.LICENSE.txt": "/static/js/2.b26984e9.chunk.js.LICENSE.txt",
+    "static/media/Resume.f6708382.pdf": "/static/media/Resume.f6708382.pdf",
     "static/media/dwarves.7e558f62.png": "/static/media/dwarves.7e558f62.png",
+    "static/media/poliatlas.fbe36be5.png": "/static/media/poliatlas.fbe36be5.png",
     "static/media/stars.dd1d3de2.jpg": "/static/media/stars.dd1d3de2.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.99041298.js",
-    "static/js/2.90676dbb.chunk.js",
-    "static/css/main.5f6f5b2e.chunk.css",
-    "static/js/main.7737320c.chunk.js"
+    "static/js/2.b26984e9.chunk.js",
+    "static/css/main.7eb0dba0.chunk.css",
+    "static/js/main.81f40dd0.chunk.js"
   ]
 }
